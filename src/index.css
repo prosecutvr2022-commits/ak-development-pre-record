@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.dark, html.dark body {
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+html:not(.dark), html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.razorpay-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.razorpay-payment-button {
+  cursor: pointer !important;
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  padding: 14px 28px !important;
+  font-size: 15px !important;
+  letter-spacing: 0.025em !important;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4) !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.razorpay-payment-button:hover {
+  transform: scale(1.02) !important;
+}
+
+.razorpay-payment-button:active {
+  transform: scale(0.98) !important;
+}
